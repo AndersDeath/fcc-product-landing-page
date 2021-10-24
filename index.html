@@ -6,16 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product landing page</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            document.querySelector('.nav-button').addEventListener('click', ()=> {
+                document.getElementById('nav-bar').style.display = 'block';
+            });
+            document.querySelector('.nav-button-close').addEventListener('click', ()=> {
+                document.getElementById('nav-bar').style.display = 'none';
+            });
+            document.querySelectorAll('.nav-link').forEach((e) => {
+                e.addEventListener('click', (e) => {
+                    document.getElementById('nav-bar').style.display = 'none';
+
+                });
+            });
+            window.addEventListener('resize', (e)=> {
+
+                if(e.target.innerWidth <= 740) {
+                    document.getElementById('nav-bar').style.display = 'none';
+                    document.querySelector('.nav-button-close').style.display='block';
+                } else {
+                    document.getElementById('nav-bar').style.display = 'block';
+                    document.querySelector('.nav-button-close').style.display='none';
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <header id="header">
         <img src="./logo.svg" alt="It's awesome logo" id="header-img">
         <nav id="nav-bar">
+            <img src="./logo.svg" alt="It's awesome logo" class="nav-logo">
+            <div class="nav-button-close"></div>
             <a href="#form" class="nav-link">Subscribe</a>
             <a href="#video" class="nav-link">Watch the video</a>
             <a href="#products" class="nav-link">Products</a>
             <a href="#call" class="nav-link">Make a call</a>
         </nav>
+        <div class="nav-button"></div>
     </header>
     <form action="https://www.freecodecamp.com/email-submit" id="form">
         <input type="email" placeholder="Enter your email address..." name="email" id="email">
