@@ -1,0 +1,212 @@
+body {
+    background: #ccc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+
+}
+
+#nav-bar {
+    line-height: 40px;
+    padding-left: 30px;
+    align-items: flex-end;
+}
+
+#nav-bar .nav-link {
+    font-size: 18px;
+    text-decoration: none;
+    color: #222;
+    padding: 5px 20px 5px 20px;
+    text-transform: capitalize;
+    border-bottom: 2px solid #ccc;
+
+}  
+
+#nav-bar .nav-link:hover {
+    border-bottom: 2px solid #000;
+    transition: 0.3s;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#form input {
+    min-width: 500px;
+    box-sizing: border-box;
+    border: none;
+    resize: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px 20px 0 0 ;
+
+}
+
+#form input[type="submit"] {
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    background: #009431;
+    border-radius: 0 0 20px 20px  ;
+}
+#form input[type="submit"]:hover {
+    background: #007025;
+    transition: 0.3s;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background: #fff;
+    padding: 0 0 40px 0;
+}
+
+.video-container #video {
+    width: 800px;
+    min-height: 450px;
+}
+
+.video-container h1 {
+    color: #333;
+}
+
+
+#products {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 20px 0 20px 0;
+
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    text-align: center;
+    border-radius: 20px;
+    border:1px solid #999 ;
+}
+
+.product .title {
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 10px;
+}
+
+.product .description {
+    padding: 20px 10px 20px 10px;
+}
+
+.product .price {
+    padding: 20px 10px 20px 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product .action {
+    padding: 20px 0 20px 0;
+    color: #fff;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    cursor: pointer;
+}
+
+.product .action.green {
+    background: #009431;
+}
+
+.product .action.green:hover {
+    background:#007025;
+    transition: 0.3s;
+}
+
+
+.product .action.blue {
+    background: #0e00cc;
+}
+
+.product .action.blue:hover {
+    background:#0c00af;
+    transition: 0.3s;
+}
+
+
+.product .action.red {
+    background: #a30000;
+}
+
+.product .action.red:hover {
+    background:#800000;
+    transition: 0.3s;
+}
+
+#call {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px
+}
+
+#call a::before {
+    background-image: url('./phone.svg');
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    margin: 3px 0px 0px -36px;
+}
+
+#call a {
+    font-size: 28px;
+    text-decoration: none;
+    color: #000;
+}
+
+#call a:hover {
+    font-size: 28px;
+    text-decoration: none;
+    color: #007025;
+    transition: 0.3s;
+
+}
+
+@media (max-width:480px)  { 
+
+    #form input {
+        min-width: 100%;
+        border-radius:  0 ;
+    }
+    
+    #form input[type="submit"] {
+
+        border-radius: 0 ;
+    }
+
+
+ }
