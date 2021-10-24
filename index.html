@@ -16,8 +16,10 @@
             });
             document.querySelectorAll('.nav-link').forEach((e) => {
                 e.addEventListener('click', (e) => {
-                    document.getElementById('nav-bar').style.display = 'none';
+                    if(window.innerWidth <= 740) {
+                        document.getElementById('nav-bar').style.display = 'none';
 
+                    }
                 });
             });
             window.addEventListener('resize', (e)=> {
@@ -77,6 +79,6 @@
     <div id="call">
         <a href="tel:+0000000">Make a call</a>
     </div>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>
 </html>
